@@ -1,107 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mitzin.com - Premium Domain For Sale</title>
-<meta name="description" content="Mitzin.com - Premium, short, and highly brandable domain name. Perfect for AI, fintech, and Web3 businesses.">
-<script src="https://cdn.tailwindcss.com"></script>
-<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.1/tsparticles.bundle.min.js"></script>
-<style>
-body { margin:0; font-family:'Helvetica',sans-serif; overflow-x:hidden; transition: background 0.5s, color 0.5s;}
-.gradient-text { background: linear-gradient(90deg,#00FFFF,#FF00FF); -webkit-background-clip:text; color:transparent;}
-.glass-card { background: rgba(255,255,255,0.1); backdrop-filter: blur(15px); border-radius:1rem; box-shadow:0 8px 32px rgba(0,0,0,0.3); opacity:0; transform: translateY(60px) perspective(1400px);}
-.glass-card.visible { opacity:1; transform: translateY(0) perspective(1400px);}
-.glass-card:hover { transform: translateY(-20px) scale(1.08) rotateX(3deg) rotateY(3deg); background: rgba(255,255,255,0.3); box-shadow:0 25px 70px rgba(0,0,0,0.7);}
-.cta-btn { transition: all 0.3s ease; border-radius:1rem; box-shadow:0 6px 25px rgba(0,0,0,0.3);}
-.cta-btn:hover { transform: translateY(-7px) scale(1.07); box-shadow:0 16px 55px rgba(0,0,0,0.6);}
-.dark-mode { background:#0a0a0a; color:#f0f0f0;}
-.light-mode { background:#f0f0f0; color:#111;}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mitzin.com - Premium Domain For Sale</title>
+  <meta name="description" content="Mitzin.com - A premium .com domain available for acquisition. Perfect for technology, AI, biotech, finance, and global brands.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Inter', sans-serif; margin: 0; }
+    .gradient-bg {
+      background: radial-gradient(circle at top, #0f172a, #000000);
+      min-height: 100vh;
+      overflow: hidden;
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+    }
+    .stars {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: white;
+      border-radius: 50%;
+      animation: twinkle 5s infinite ease-in-out;
+    }
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.2; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.5); }
+    }
+    .glow {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      filter: blur(120px);
+      opacity: 0.4;
+      animation: float 12s infinite ease-in-out alternate;
+    }
+    @keyframes float {
+      from { transform: translateY(0px) translateX(0px); }
+      to { transform: translateY(-50px) translateX(50px); }
+    }
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeUp 1s ease-out forwards;
+    }
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .logo-placeholder {
+      width: 100px;
+      height: 100px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      margin: 0 auto 1rem auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: #fff;
+    }
+    .counter {
+      margin-top: 0.5rem;
+      font-size: 0.875rem;
+      color: #aaa;
+    }
+  </style>
 </head>
-<body class="dark-mode">
+<body class="gradient-bg flex items-center justify-center p-6 text-white relative">
+  <!-- Animated Background -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Stars
+      const numStars = 80;
+      for (let i = 0; i < numStars; i++) {
+        const star = document.createElement("div");
+        star.className = "stars";
+        star.style.top = Math.random() * 100 + "vh";
+        star.style.left = Math.random() * 100 + "vw";
+        star.style.animationDuration = (3 + Math.random() * 5) + "s";
+        document.body.appendChild(star);
+      }
+      // Glows
+      const colors = ["#6366f1", "#ec4899", "#22c55e", "#06b6d4"];
+      colors.forEach((c, i) => {
+        const glow = document.createElement("div");
+        glow.className = "glow";
+        glow.style.background = c;
+        glow.style.top = Math.random() * 80 + "vh";
+        glow.style.left = Math.random() * 80 + "vw";
+        glow.style.animationDelay = i * 3 + "s";
+        document.body.appendChild(glow);
+      });
 
-<!-- Dark/Light Toggle -->
-<button id="toggleMode" class="fixed top-5 right-5 z-50 bg-gray-700 text-white px-4 py-2 rounded-lg shadow-lg">Toggle Mode</button>
+      // Simple Visitor Counter (increments per page load)
+      let visits = localStorage.getItem('mitzin_visits') || 0;
+      visits = parseInt(visits) + 1;
+      localStorage.setItem('mitzin_visits', visits);
+      document.getElementById('visitor-counter').textContent = visits + " visits";
+    });
+  </script>
 
-<!-- Interactive Particles Background -->
-<div id="tsparticles" class="absolute inset-0 z-0"></div>
+  <div class="relative max-w-4xl w-full text-center space-y-10 fade-up z-10">
+    
+    <!-- Logo Placeholder -->
+    <div class="logo-placeholder">M</div>
 
-<!-- Hero Section -->
-<section class="relative z-10 min-h-screen flex flex-col items-center justify-center text-center px-6">
-  <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_tkautw2k.json"
-                 background="transparent" speed="1" style="width:600px; height:600px;" loop autoplay
-                 class="mb-10"></lottie-player>
+    <!-- Visitor Counter -->
+    <div id="visitor-counter" class="counter">0 visits</div>
 
-  <h1 class="text-6xl sm:text-7xl font-extrabold mb-6 gradient-text">Mitzin.com</h1>
-  <p class="text-xl sm:text-2xl mb-12 max-w-2xl">
-    A <span class="font-semibold">premium .com domain</span> for the future.  
-    Perfect for <strong>AI, Web3, fintech, blockchain, and global startups</strong>.
-  </p>
+    <!-- Title -->
+    <h1 class="text-6xl md:text-7xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400">
+      Mitzin.com
+    </h1>
+    <p class="text-2xl text-gray-300 max-w-2xl mx-auto">
+      A <span class="text-indigo-400 font-semibold">rare premium .com domain</span> — short, brandable, and built for <span class="text-pink-400">Technology, AI, Finance, and Global Brands</span>.
+    </p>
 
-  <div class="flex flex-col sm:flex-row gap-6 mb-16">
-    <a href="https://your-contact-page.com" class="cta-btn bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-4 px-10">
-      🚀 Make an Offer
-    </a>
-    <a href="https://sedo.com/search/details/?domain=mitzin.com" target="_blank" class="cta-btn bg-purple-600 hover:bg-purple-700 text-white font-semibold py-4 px-10">
-      🔗 View on Sedo
-    </a>
-    <a href="https://www.afternic.com/domain/mitzin.com" target="_blank" class="cta-btn bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-10">
-      🌍 View on Afternic
-    </a>
-  </div>
+    <!-- Buy Buttons -->
+    <div class="grid md:grid-cols-2 gap-4">
+      <a href="https://sedo.com/search/?keyword=mitzin.com" target="_blank" class="glass px-6 py-4 rounded-xl shadow-lg hover:shadow-pink-500/50 transition text-lg font-semibold">
+        🌍 Buy on Sedo
+      </a>
+      <a href="https://www.afternic.com/domain/mitzin.com" target="_blank" class="glass px-6 py-4 rounded-xl shadow-lg hover:shadow-indigo-500/50 transition text-lg font-semibold">
+        🚀 Buy on Afternic
+      </a>
+      <a href="https://atom.com/domains/mitzin.com" target="_blank" class="glass px-6 py-4 rounded-xl shadow-lg hover:shadow-purple-500/50 transition text-lg font-semibold">
+        💎 Buy on Atom
+      </a>
+      <a href="https://unstoppabledomains.com/domain/mitzin.com" target="_blank" class="glass px-6 py-4 rounded-xl shadow-lg hover:shadow-green-500/50 transition text-lg font-semibold">
+        🔗 Buy on UD
+      </a>
+    </div>
 
-  <div class="grid sm:grid-cols-2 gap-8 max-w-5xl w-full">
-    <div class="glass-card p-8" data-tilt data-tilt-max="30">
-      <h3 class="text-xl font-bold mb-4">💡 Why Mitzin.com?</h3>
-      <ul class="space-y-2">
-        <li>✅ Short & highly brandable</li>
-        <li>✅ Strong premium appeal</li>
-        <li>✅ Perfect for AI & fintech</li>
-        <li>✅ Recognizable & global-ready</li>
+    <!-- Features -->
+    <div class="glass p-8 rounded-2xl shadow-xl text-left space-y-4">
+      <h2 class="text-3xl font-bold text-indigo-300">Why Invest in Mitzin.com?</h2>
+      <ul class="space-y-2 text-gray-200 text-lg">
+        <li>✅ Premium <strong>.com</strong> asset with global reach</li>
+        <li>✅ Short, memorable, and highly brandable</li>
+        <li>✅ Perfect for startups, enterprises & Web3 projects</li>
+        <li>✅ High-value digital investment with resale potential</li>
       </ul>
     </div>
-    <div class="glass-card p-8" data-tilt data-tilt-max="30">
-      <h3 class="text-xl font-bold mb-4">🛒 Marketplaces</h3>
-      <ul class="space-y-2">
-        <li><strong>Sedo:</strong> Europe’s biggest marketplace</li>
-        <li><strong>Afternic:</strong> Global distribution (GoDaddy)</li>
-        <li><strong>Atom:</strong> Startup-focused branding</li>
-        <li><strong>Unstoppable:</strong> Web3-native buyers</li>
-      </ul>
-    </div>
+
+    <!-- Footer -->
+    <footer class="text-gray-500 text-sm mt-12">
+      © 2025 Mitzin.com — Premium Domain Marketplace
+    </footer>
   </div>
-
-  <p class="text-sm mt-16 mb-8">© 2025 Mitzin.com – Premium Domain Name</p>
-</section>
-
-<script>
-// Dark/Light Toggle
-const toggleBtn = document.getElementById('toggleMode');
-toggleBtn.addEventListener('click', ()=>{ document.body.classList.toggle('dark-mode'); document.body.classList.toggle('light-mode'); });
-
-// Tilt 3D Depth
-VanillaTilt.init(document.querySelectorAll("[data-tilt]"), { max:30, speed:600, glare:true, "max-glare":0.5, scale:1.08 });
-
-// Particles Interactive
-tsParticles.load("tsparticles", {
-  fpsLimit:60,
-  particles:{ number:{value:100}, color:{value:"#ffffff"}, shape:{type:"circle"}, opacity:{value:0.3},
-    size:{value:{min:1,max:5}}, move:{enable:true,speed:1.8,direction:"none",outModes:{default:"bounce"}},
-    links:{enable:true,distance:140,color:"#ffffff",opacity:0.2,width:1.5}
-  },
-  interactivity:{ events:{onHover:{enable:true,mode:"grab"}, onClick:{enable:true,mode:"push"}},
-    modes:{grab:{distance:160}, push:{quantity:5}}
-  },
-  detectRetina:true
-});
-
-// Scroll-triggered animations for Cards
-const cards = document.querySelectorAll('.glass-card');
-const observer = new IntersectionObserver(entries=>{ entries.forEach(entry=>{ if(entry.isIntersecting){ entry.target.classList.add('visible'); } }); }, {threshold:0.2});
-cards.forEach(card=>observer.observe(card));
-</script>
 </body>
 </html>
